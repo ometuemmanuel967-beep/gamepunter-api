@@ -6,12 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// HOME ROUTE
-app.get("/", (req, res) => {
-  res.send("🏆 GamePunter API is LIVE");
-});
-
-// SAMPLE FREE TIPS
 app.get("/api/tips", (req, res) => {
   res.json([
     {
@@ -31,6 +25,4 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
-});
-  console.log("Server running on port 3000");
 });
